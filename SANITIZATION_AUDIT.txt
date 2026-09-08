@@ -1,0 +1,8 @@
+AZURE VM FINOPS SANITIZED PACKAGE
+Generated: 2026-09-08T17:58:38.771363
+VM dashboards: 300
+HTML links checked: 504
+Excel links checked: 302
+Residual text findings: 0
+Residual Excel findings: 0
+Validation: PASSED
