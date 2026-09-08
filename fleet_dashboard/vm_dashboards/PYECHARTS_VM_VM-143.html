@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Azure VM FinOps Dashboard - host-143.example.invalid</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<style>
+:root{--blue:#0078d4;--dark:#17365d;--green:#107c10;--amber:#ffb900;--red:#d13438;--purple:#8764b8;--bg:#f4f7fb;--card:#fff;--text:#172b4d;--muted:#5e6c84;--border:#dde5ef}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif}.shell{width:min(1700px,100%);margin:auto;padding:24px}.hero{padding:30px;color:#fff;border-radius:18px;background:linear-gradient(135deg,var(--dark),var(--blue),#00a4ef);box-shadow:0 12px 30px rgba(0,69,120,.18)}.hero h1{margin:0 0 8px;font-size:32px}.hero p{margin:0;color:#dbeafe}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:20px 0}.kpi,.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:0 5px 16px rgba(23,43,77,.06)}.kpi{padding:18px;border-left:5px solid var(--blue)}.kpi.green{border-left-color:var(--green)}.kpi.amber{border-left-color:var(--amber)}.kpi.red{border-left-color:var(--red)}.kpi.purple{border-left-color:var(--purple)}.kpi small{display:block;color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase}.kpi strong{display:block;margin-top:8px;font-size:25px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.panel{padding:16px;margin-bottom:16px}.panel.full{grid-column:1/-1}.chart{width:100%;height:480px}.chart.calendar{height:max(850px,calc(2 * 29px + 300px))}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px;border-bottom:1px solid #e9eef4;text-align:left}th{width:220px;color:var(--muted)}.note{padding:14px 16px;border-radius:10px;background:#fff8d6;border:1px solid #f2d675;line-height:1.5}.footer{padding:24px;text-align:center;color:var(--muted);font-size:12px}@media(max-width:950px){.grid{grid-template-columns:1fr}.panel.full{grid-column:auto}}
+</style>
+</head>
+<body><main class="shell">
+<section class="hero"><h1>Azure VM FinOps Dashboard</h1><p>host-143.example.invalid | Opportunity Rank #143 | 1 - Idle Review</p></section>
+<section class="kpis">
+<div class="kpi purple"><small>Monthly Cost</small><strong>$61.61</strong></div>
+<div class="kpi"><small>Annual Cost</small><strong>$739.34</strong></div>
+<div class="kpi green"><small>Monthly Savings</small><strong>$15.40</strong></div>
+<div class="kpi green"><small>Annual Savings</small><strong>$184.84</strong></div>
+<div class="kpi amber"><small>CPU P95</small><strong>5.57%</strong></div>
+<div class="kpi red"><small>Memory P95</small><strong>19.63%</strong></div>
+</section>
+<section class="panel"><h2>Executive Summary and VM Metadata</h2><table><tr><th>VM Name</th><td>host-143.example.invalid</td></tr><tr><th>Computer</th><td>host-143.example.invalid</td></tr><tr><th>VM Key</th><td>host-143.example.invalid</td></tr><tr><th>VM Size</th><td>Standard_B2as_v2</td></tr><tr><th>Resource Group</th><td>RG-113</td></tr><tr><th>Subscription</th><td>SUB-017</td></tr><tr><th>Location</th><td>REGION-002</td></tr><tr><th>Operating System</th><td>Windows</td></tr><tr><th>Study Period</th><td>2026-08-28 through 2026-08-29</td></tr><tr><th>Hourly Records</th><td>12</td></tr><tr><th>Rightsizing Category</th><td>Possible Downsize Candidate</td></tr><tr><th>Recommendation</th><td>Downsize by ~25%</td></tr><tr><th>Recommendation Confidence</th><td>Medium</td></tr></table></section>
+<section class="grid">
+<div class="panel"><div id="dailyCpu" class="chart"></div></div>
+<div class="panel"><div id="dailyMemory" class="chart"></div></div>
+<div class="panel"><div id="hourlyCpu" class="chart"></div></div>
+<div class="panel"><div id="hourlyMemory" class="chart"></div></div>
+<div class="panel"><div id="weeklyCpu" class="chart"></div></div>
+<div class="panel"><div id="weeklyMemory" class="chart"></div></div>
+<div class="panel full"><div id="calendarCpu" class="chart calendar"></div></div>
+<div class="panel full"><div id="calendarMemory" class="chart calendar"></div></div>
+</section>
+<section class="note">Recommendations are analytical estimates. Validate application ownership, operational dependencies, business criticality, licensing, reservations, savings plans, and actual billed cost before changing Azure resources.</section>
+<div class="footer">Generated 2026-09-08 14:20:07 | Azure VM FinOps</div>
+</main>
+<script>
+const d={"dates": ["2026-08-28", "2026-08-29"], "hours": ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"], "weekdays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "dateLabels": ["Fri 08-28", "Sat 08-29"], "dailyCpuP50": [4.19, 4.73], "dailyCpuP95": [49.44, 4.73], "dailyMemoryP50": [19.34, 19.71], "dailyMemoryP95": [20.08, 19.71], "hourlyCpuP50": [4.73, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.32, 4.27, 4.22, 4.24, 4.18, 4.2, 4.16, 4.19, 4.14, 4.16, 4.09], "hourlyCpuP95": [4.73, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 49.44, 5.69, 6.07, 5.5, 5.44, 5.45, 5.73, 5.59, 5.57, 5.24, 5.57], "hourlyMemoryP50": [19.71, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 18.95, 19.09, 19.12, 19.27, 19.3, 19.34, 19.36, 19.46, 19.51, 19.57, 19.64], "hourlyMemoryP95": [19.71, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 20.08, 19.31, 19.45, 19.42, 19.49, 19.53, 19.59, 19.76, 19.67, 19.72, 19.86], "weeklyCpu": [[13, 4, 49.44], [14, 4, 5.69], [15, 4, 6.07], [16, 4, 5.5], [17, 4, 5.44], [18, 4, 5.45], [19, 4, 5.73], [20, 4, 5.59], [21, 4, 5.57], [22, 4, 5.24], [23, 4, 5.57], [0, 5, 4.73]], "weeklyMemory": [[13, 4, 20.08], [14, 4, 19.31], [15, 4, 19.45], [16, 4, 19.42], [17, 4, 19.49], [18, 4, 19.53], [19, 4, 19.59], [20, 4, 19.76], [21, 4, 19.67], [22, 4, 19.72], [23, 4, 19.86], [0, 5, 19.71]], "calendarCpu": [[13, 0, 49.44], [14, 0, 5.69], [15, 0, 6.07], [16, 0, 5.5], [17, 0, 5.44], [18, 0, 5.45], [19, 0, 5.73], [20, 0, 5.59], [21, 0, 5.57], [22, 0, 5.24], [23, 0, 5.57], [0, 1, 4.73]], "calendarMemory": [[13, 0, 20.08], [14, 0, 19.31], [15, 0, 19.45], [16, 0, 19.42], [17, 0, 19.49], [18, 0, 19.53], [19, 0, 19.59], [20, 0, 19.76], [21, 0, 19.67], [22, 0, 19.72], [23, 0, 19.86], [0, 1, 19.71]]};
+const colors={blue:'#0078d4',light:'#50e6ff',green:'#107c10',amber:'#ffb900',red:'#d13438',purple:'#8764b8'};
+const base={tooltip:{trigger:'axis'},toolbox:{show:true,feature:{dataView:{readOnly:true},restore:{},saveAsImage:{}}},grid:{left:65,right:30,top:75,bottom:70},dataZoom:[{type:'inside'},{type:'slider',height:16,bottom:12}]};
+function line(id,title,x,p50,p95,yName){const c=echarts.init(document.getElementById(id));c.setOption({...base,title:{text:title,left:10},legend:{top:35},xAxis:{type:'category',data:x,boundaryGap:false},yAxis:{type:'value',name:yName,min:0,max:100},series:[{name:'P50',type:'line',smooth:true,showSymbol:false,data:p50,itemStyle:{color:colors.light}},{name:'P95',type:'line',smooth:true,showSymbol:false,data:p95,itemStyle:{color:colors.blue},areaStyle:{opacity:.08}}]});return c;}
+function heat(id,title,x,y,data,color){const c=echarts.init(document.getElementById(id));c.setOption({tooltip:{position:'top',formatter:p=>`${y[p.value[1]]} | ${x[p.value[0]]}<br>${p.value[2].toFixed(2)}%`},title:{text:title,left:10},toolbox:{show:true,feature:{dataView:{readOnly:true},restore:{},saveAsImage:{}}},grid:{left:105,right:105,top:70,bottom:55},xAxis:{type:'category',data:x,splitArea:{show:true},axisLabel:{interval:0,rotate:45}},yAxis:{type:'category',data:y,splitArea:{show:true},axisLabel:{formatter:v=>(v.startsWith('Sat')||v.startsWith('Sun'))?'★ '+v:v}},visualMap:{min:0,max:100,calculable:true,orient:'vertical',right:8,top:'middle',inRange:{color:color}},series:[{name:'P95',type:'heatmap',data:data,emphasis:{itemStyle:{shadowBlur:10,shadowColor:'rgba(0,0,0,.4)'}}}]});return c;}
+const charts=[];
+charts.push(line('dailyCpu','Daily CPU Utilization',d.dates,d.dailyCpuP50,d.dailyCpuP95,'CPU %'));
+charts.push(line('dailyMemory','Daily Memory Utilization',d.dates,d.dailyMemoryP50,d.dailyMemoryP95,'Memory %'));
+charts.push(line('hourlyCpu','Hourly CPU Profile',d.hours,d.hourlyCpuP50,d.hourlyCpuP95,'CPU %'));
+charts.push(line('hourlyMemory','Hourly Memory Profile',d.hours,d.hourlyMemoryP50,d.hourlyMemoryP95,'Memory %'));
+charts.push(heat('weeklyCpu','Weekly CPU P95 Heatmap',d.hours,d.weekdays,d.weeklyCpu,['#eef7ff','#50e6ff','#ffb900','#d13438']));
+charts.push(heat('weeklyMemory','Weekly Memory P95 Heatmap',d.hours,d.weekdays,d.weeklyMemory,['#effaf5','#57c4a2','#ffb900','#d13438']));
+charts.push(heat('calendarCpu','CPU Utilization by Calendar Day and Hour',d.hours,d.dateLabels,d.calendarCpu,['#eef7ff','#50e6ff','#ffb900','#d13438']));
+charts.push(heat('calendarMemory','Memory Utilization by Calendar Day and Hour',d.hours,d.dateLabels,d.calendarMemory,['#effaf5','#57c4a2','#ffb900','#d13438']));
+window.addEventListener('resize',()=>charts.forEach(c=>c.resize()));
+</script></body></html>
